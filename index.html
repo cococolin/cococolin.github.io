@@ -112,7 +112,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: true,
@@ -350,6 +350,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/10/我的第一篇博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/10/我的第一篇博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -388,15 +399,11 @@
         
           
           第一篇博客
-使用hexo和github搭建个人博客.
+##费了两天劲，总算弄了个大概，写一篇记录下用hexo和github搭建个人博客的心得：
 
-安装Node.js、Hexo、Git
-新建博客：hexo n ，用markdown编辑器编辑文章
-生成：hexo g
-部署到电脑：hexo s
-部署到github：hexo d 
-
-Markdown is a lightweight marku
+先安装Node.js、Hexo、Git；
+新建博客：hexo n &lt;NAME&gt; 用MarkdownPad 2编辑文章；
+_config.yml文件格式要求很高，冒号后面要有空格不然会报
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -495,6 +502,17 @@ Markdown is a lightweight marku
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/09/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/09/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -713,6 +731,11 @@ Markdown is a lightweight marku
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -760,11 +783,6 @@ Markdown is a lightweight marku
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
 
   </div>
 
@@ -788,6 +806,9 @@ Markdown is a lightweight marku
 
 
 
+
+  
+  
 
 
 
@@ -814,6 +835,12 @@ Markdown is a lightweight marku
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -846,6 +873,14 @@ Markdown is a lightweight marku
 
   
 
+    
+      <script id="dsq-count-scr" src="https://colin.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
 
 
 
@@ -858,10 +893,6 @@ Markdown is a lightweight marku
   
 
 
-
-
-
-  
 
 
 
