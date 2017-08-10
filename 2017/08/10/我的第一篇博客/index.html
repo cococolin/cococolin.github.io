@@ -98,7 +98,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博客">
 <meta property="og:url" content="http://yoursite.com/2017/08/10/我的第一篇博客/index.html">
-<meta property="og:site_name" content="GuoHaodong&#39;s ����">
+<meta property="og:site_name" content="欢迎进入郭昊东的个人博客">
 <meta property="og:description" content="第一篇博客 使用hexo和github搭建个人博客.  安装Node.js、Hexo、Git 新建博客：hexo n ，用markdown编辑器编辑文章 生成：hexo g 部署到电脑：hexo s 部署到github：hexo d   Markdown is a lightweight markup language based on the formatting conventions tha">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/07/27/18/39/shell-2546312_960_720.jpg">
@@ -122,7 +122,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: '����'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -142,7 +142,7 @@
 
 
 
-  <title>我的第一篇博客 | GuoHaodong's ����</title>
+  <title>我的第一篇博客 | 欢迎进入郭昊东的个人博客</title>
   
 
 
@@ -172,7 +172,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">GuoHaodong's ����</span>
+        <span class="site-title">欢迎进入郭昊东的个人博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,17 +202,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            ��ҳ
+            首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            �鵵
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -222,7 +232,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            ��ǩ
+            标签
           </a>
         </li>
       
@@ -262,13 +272,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/我的第一篇博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Colin">
+      <meta itemprop="name" content="郭昊东">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GuoHaodong's ����">
+      <meta itemprop="name" content="欢迎进入郭昊东的个人博客">
     </span>
 
     
@@ -286,9 +296,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">������</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="������" itemprop="dateCreated datePublished" datetime="2017-08-10T11:23:41+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T11:23:41+08:00">
                 2017-08-10
               </time>
             
@@ -352,7 +362,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>Donate to author if you like my article!</div>
+  <div>Donate comment here if you like my article</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -360,13 +370,23 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/paytome.png" alt="Colin WeChat Pay"/>
+        <img id="wechat_qr" src="/images/paytome.png" alt="郭昊东 WeChat Pay"/>
         <p>WeChat Pay</p>
       </div>
     
 
     
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipaytome.jpg" alt="郭昊东 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
 
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/donate_icon.png" alt="郭昊东 Bitcoin"/>
+        <p>Bitcoin</p>
+      </div>
     
 
   </div>
@@ -375,6 +395,24 @@
       </div>
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    郭昊东
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2017/08/10/我的第一篇博客/" title="我的第一篇博客">http://yoursite.com/2017/08/10/我的第一篇博客/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -450,10 +488,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            ����Ŀ¼
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            վ������
+            站点概览
           </li>
         </ul>
       
@@ -462,19 +500,19 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
-               alt="Colin" />
-          <p class="site-author-name" itemprop="name">Colin</p>
+               alt="郭昊东" />
+          <p class="site-author-name" itemprop="name">郭昊东</p>
            
-              <p class="site-description motion-element" itemprop="description">In me the tiger, sniff the rose</p>
+              <p class="site-description motion-element" itemprop="description">静水流深，沧笙踏歌</p>
           
         </div>
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives/">
+              <a href="/">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">��־</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -539,16 +577,16 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Colin</span>
+  <span class="author" itemprop="copyrightHolder">郭昊东</span>
 </div>
 
 
 <div class="powered-by">
-  �� <a class="theme-link" href="https://hexo.io">Hexo</a> ǿ������
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  ���� -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
