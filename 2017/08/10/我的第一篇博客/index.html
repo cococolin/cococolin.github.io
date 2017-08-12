@@ -104,7 +104,7 @@
 <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/07/27/18/39/shell-2546312_960_720.jpg">
 <meta property="og:image" content="https://cldup.com/dTxpPi9lDf.thumb.png">
 <meta property="og:image" content="http://i.imgur.com/rnHhz2q.gif">
-<meta property="og:updated_time" content="2017-08-10T13:33:40.023Z">
+<meta property="og:updated_time" content="2017-08-10T13:36:24.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博客">
 <meta name="twitter:description" content="第一篇博客 ##费了两天劲，总算弄了个大概，写一篇记录下用hexo和github搭建个人博客的心得：  先安装Node.js、Hexo、Git； 新建博客：hexo n &amp;lt;NAME&amp;gt; 用MarkdownPad 2编辑文章； _config.yml文件格式要求很高，冒号后面要有空格不然会报错； _config.yml最好用Sublime Text编辑，记事本编码方式有误； 生成：hexo">
@@ -117,7 +117,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: true,
@@ -167,7 +167,7 @@
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta custom-logo">
     
 
     <div class="custom-logo-site-title">
@@ -178,7 +178,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Designed by Colin</p>
+        <p class="site-subtitle">静水流深，沧笙踏歌</p>
       
   </div>
 
@@ -418,7 +418,7 @@
 <li>NexT这个主题是真的功能齐全。</li>
 </ul>
 <p><strong>喜欢的话可以页面最下面点击Donate打赏给我</strong></p>
-<p>技术交流请邮件至colinguo0919@gmail.com</p>
+<p>欢迎评论，技术交流请邮件至colinguo0919@gmail.com</p>
 <p>##<br>Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]</p>
 <blockquote>
 <p>The overriding design goal for Markdown’s<br>formatting syntax is to make it as readable<br>as possible. The idea is that a<br>Markdown-formatted document should be<br>publishable as-is, as plain text, without<br>looking like it’s been marked up with tags<br>or formatting instructions.</p>
@@ -436,7 +436,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>Donate comment here if you like my article</div>
+  <div>喜欢这篇文章的话点击下面按钮打赏给作者</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -567,6 +567,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -708,6 +710,8 @@
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
           
         </div>
       
@@ -1019,6 +1023,8 @@
   
 
   
+  
+
 
   
 
