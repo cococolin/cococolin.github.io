@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/ironman-draw.png"/>
+	 <link rel="shortcut icon" href="/img/ironman-draw.png">
+	
+			
+    <title>
+    Hi，昊东
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Colin's Blog</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Dialog/">Dialog</a></li><li><a class="category-link" href="/categories/Diary/">Diary</a></li><li><a class="category-link" href="/categories/Journal/">Journal</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a></li><li><a class="archive-link" href="/archives/2017/11/">November 2017</a></li><li><a class="archive-link" href="/archives/2017/10/">October 2017</a></li><li><a class="archive-link" href="/archives/2017/09/">September 2017</a></li><li><a class="archive-link" href="/archives/2017/08/">August 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/cococolin" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		                <li><a href="https://www.facebook.com/colinguo0919" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+		            
+		            
+		                <li><a href="https://www.instagram.com/guohaodong/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+		            
+		            
+		                <li><a href="https://twitter.com/9qOSresfVA3Ef1i#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/images/2018_1_3_olsr/olsr.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >最佳链路状态路由协议OLSR分析</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p><img src="/images/2018_1_3_olsr/olsr_logo.jpg" alt=""><br><a id="more"></a></p>
+<h1 id="最佳链路状态路由协议（OLSR）源代码分析"><a href="#最佳链路状态路由协议（OLSR）源代码分析" class="headerlink" title="最佳链路状态路由协议（OLSR）源代码分析"></a>最佳链路状态路由协议（OLSR）源代码分析</h1><p>·引言</p>
+<p>OLSR是Optimized Link State Routing 的简称，主要用于MANET网络(Mobile Ad hoc network)的路由协议（OLSR）。OLSR是根据MANET的要求，在传统的LS（Link state）协议的基础上优化的。<br>OLSR中的关键概念是多点转播（MPRs），MPRs是在广播洪泛的过程中挑选的转发广播的节点。</p>
+<p>传统的链路状态协议每个节点都转发它收到信息的第一份拷贝，同它相比，OLSR很大程度上减少了转发的信息。在OLSR协议中，链路状态信息都是由被挑选为MPRs的节点产生的，这样减少了在网络中洪泛的控制信息，实现了第二步优化。第三步优化是MPR节点只选择在MPR或者MPR选择者之间传递链接状态信息。因此，同传统LS协议相比，在网络中分布着部分链路状态信息，这些信息将用于路由计算。</p>
+<p>OLSR以路由跳数提供最优路径。这种协议尤其适合大而密集型的网络。</p>
+<h2 id="第一章-代码简述"><a href="#第一章-代码简述" class="headerlink" title="第一章 代码简述"></a>第一章 代码简述</h2><h3 id="1-1关于文件"><a href="#1-1关于文件" class="headerlink" title="1.1关于文件"></a>1.1关于文件</h3><p>据统计，OLSR协议的源代码中共有123个源文件，现将文件介绍如下表。</p>
+<pre><code>文件                    描述
+link_set.c             Olsrd-0.6.0/link_set.c 确定邻居表的信息
+lq_packet.h         对olsr,hello,TC数据包以及其他一些数据结构的定义
+mpr.c                 Olsrd-0.6.0/mpr.c 关于MPR的一些操作
+mpr_selector_set.h     定义了结构体mpr_selector表示MPR选择源节
+neighbor_table.h     对邻居信息数据结构的定义
+neighbor_table.c     对一跳邻居和二跳邻居的处理
+olsr.c                 实现一些全局函数，比如网络拓扑结构的计算
+routing_table.c        路由表的处理
+TC_set.c            TC消息的洪泛
+</code></pre><h3 id="2-2关于全局变量"><a href="#2-2关于全局变量" class="headerlink" title="2.2关于全局变量"></a>2.2关于全局变量</h3><p>在下面的协议解析中，我们将对用到的全局变量进行分析，如下表。</p>
+<pre><code>全局变量                    数据类型        描述
+olsrport                 nit16_t     OLSR消息发送接收的端口号 
+rt_proto                 nit8_t         路由表计算的所遵循的协议 
+willingness             nit8_t         WILL_ALWAYS的邻居节点集合 
+use_hysteresis             Bool        判断消息是否迟滞 
+min_tc_vtime             float         TC消息vtime的最小取值 
+max_tc_vtime             float         TC消息vtime的最大取值 
+max_jitter                 float         消息传播的最大抖动 
+changes_topology         bool         判断拓扑信息是否变化 
+changes_neighborhood     bool         判断邻居信息是否变化
+</code></pre><h3 id="1-3-配置变量"><a href="#1-3-配置变量" class="headerlink" title="1.3 配置变量"></a>1.3 配置变量</h3><p>olsr协议中的任何具体实现都必须支持下列配置变量和必须支持通过系统管理可以修改这些配置变量取值的某种机制。</p>
+<pre><code>配置变量名            默认值
+DEF_IP_VERSION         缺省ip协议域 
+DEF_USE_HYST         缺省消息迟滞 
+DEF_LQ_LEVEL         缺省链路质量等级 
+DEF_OLSRPORT         缺省olsr端口号 
+DEF_MIN_TC_VTIME     TC消息vtime最小取值 
+DEF_GW_TYPE         缺省网关类型 
+</code></pre><h2 id="第二章-OLSR函数调用关系"><a href="#第二章-OLSR函数调用关系" class="headerlink" title="第二章 OLSR函数调用关系"></a>第二章 OLSR函数调用关系</h2><h2 id="第三章-OLSR消息包数据结构"><a href="#第三章-OLSR消息包数据结构" class="headerlink" title="第三章 OLSR消息包数据结构"></a>第三章 OLSR消息包数据结构</h2><p>OLSR使用统一的数据包格式与协议相关的所有数据进行通信。这样做的目的是在不破坏向后兼容性的情况下促进协议的可扩展性。这也提供了将不同“类型”的信息捎带成单个传输的简单方法，并且因此对于给定的实现来优化以利用由网络提供的最大帧大小。这些数据包被嵌入在UDP数据报中，以便通过网络传输。</p>
+<h3 id="3-1-OLSR首部"><a href="#3-1-OLSR首部" class="headerlink" title="3.1 OLSR首部"></a>3.1 OLSR首部</h3><p>图3.1.1 OLSR首部结构体源码</p>
+<ul>
+<li>olsr_common是OLSR协议基本数据包。其中包含以下几部分: </li>
+</ul>
+<ul>
+<li>type：消息类型</li>
+</ul>
+<ul>
+<li>vtime：表示接收后很长时间节点如何确保数据包中的消息有效</li>
+</ul>
+<ul>
+<li>size：消息大小</li>
+</ul>
+<ul>
+<li>orig：发端地址</li>
+</ul>
+<ul>
+<li>ttl：跳数，消息在传递过程中最大跳数，每转发一次，ttl减1</li>
+</ul>
+<ul>
+<li>hops：此消息在传递过程中经历的跳数</li>
+</ul>
+<ul>
+<li>seqno：消息的序列号，这是唯一不变的以确保消息不回被重发</li>
+</ul>
+<p>数据包格式如下：</p>
+<p>图3.1.2 数据包格式示意图</p>
+<h3 id="3-2-Hello消息包"><a href="#3-2-Hello消息包" class="headerlink" title="3.2 Hello消息包"></a>3.2 Hello消息包</h3><p>图3.2.1 Hello消息包结构体源代码</p>
+<p>为了适应链路感知，邻居检测和MPR选择信令，以及为了适应未来的扩展，类似于整个分组格式的方法是拍摄。因此，所提出的HELLO消息的格式如下：</p>
+<p>图3.2.2  Hello消息包示意图<br>3.3 TC 消息包 </p>
+<p>图3.3.1  TC消息包结构体源代码<br>TC消息的建议格式如下：</p>
+<p>图3.3.2  TC消息建议格式示意图<br>第四章OLSR协议概述<br>4.1邻居发现<br>邻居发现是基于节点的邻居信息库，通过HELLO消息的传播实现<br>邻居消息库包含关于邻居、2跳邻居、MPRs和MPR的信息。<br>4.1.1节点信息的存储<br>   每个节点都存储自身的信息在结构体link_entry中。</p>
+<p>图4.1.1  结构体link_entry源代码</p>
+<p>00059-00060：local_iface_addr存储该节点接口ip地址，neighbor_iface_addr存储邻居节点ip地址。<br>00067：neighbor以链接表形式存储邻居节点信息。<br>   邻居节点具体信息如下：</p>
+<p>图4.1.2  邻居节点结构体源代码</p>
+<p>Neighbor_entry结构体，用来存储邻居节点信息。记录了邻居节点的总地址，状态，作为MPR的willingnessz值，是否是MPR，是否曾是MPR，覆盖的两跳邻居节点的数量，及节点连接链路的数量以及指向neighbor_2_list链表的指针。其中，成员变量was_mpr用来发现MPR的变化。</p>
+<p>图4.1.3  Neighbor_entry结构体源代码</p>
+<p>这段代码定义了neighbor_2_list_entry的结构体，这是用来存储邻居节点信息的，两跳节点信息以及记录有效时间的链表结构。mid_address存储本节点的其他接口ip地址。其中mid_entry节点链路信息。Mid_entry包含节点主地址，上一节点和下一节点链路，同时还有本节点链路中其他端口信息存储在aliases链表中。<br>4.1.2关于节点的具体操作分析</p>
+<p>图4.1.4  reset函数源代码</p>
+<p>函数功能：重置所有节点信息。<br>00095-00103：遍历所有节点一遍，把所有信息置为初始值，并把邻居节点也设为空值。</p>
+<p>图4.1.5  get_neighbor_status函数源代码</p>
+<p>函数通过查找main_addr找到节点link_entry，通过lookup_link_status找出节点链路状态。判断其是否是对称状态。<br>00197-00206行查找主地址并找出节点上的其他端口ip判断该节点其他端口aliases链路状态，并判断该Ip地址所在的链路状态是否是对称状态。只返回对称链路的信息。</p>
+<p>图4.1.6  删除节点链路上所有信息的函数源代码</p>
+<p>函数功能：删除节点链路上所有的信息。<br>定义拓扑边缘节点TC_edge：通过邻居端口地址找出TC_edge边缘链路：<br>00365-00369：删除边缘链路spf；<br>00372-00377：删除邻居链路信息，存储在hash表中的链路表删除；<br>00379-00394：清空一些正在计时的属性，同时释放link的资源空间；<br>同时将change_neighborhood设置为true，让其他节点更新自己的链路状况，发送hello消息包及时更新邻居表的信息。</p>
+<p>图4.1.7  update_link_entry函数源代码</p>
+<p>函数功能：更新链路信息状态，通过hello_message来更新邻居节点的信息。<br>00694-00699：如果该节点不在链路中，把它加入到链路中去，并将计时器更细；<br>00708-00732：通过check_link_status同过发送hello_message发送该节点的邻居链路状态link_type,对不同的状态采取不同的操作；<br>00708-00718：如果是对称或者非对称的需将定时器重新设置，更新定时器。<br>00732：更新邻居节点的状态信息，是对称还是非对称。</p>
+<p>图4.1.8  check_link_status函数源代码<br>函数功能：发送hello消息，维护一个端口的邻居信息。<br>00708-00797：发送Hello_message来维护端口信息，知道消息到达所有的邻居节点，就停止发送，则该端口的所有邻居节点链路都检查完毕。<br>4.1.3邻居表的操作<br>1.邻居表初始化</p>
+<p>图4.1.9  邻居表初始化函数源代码<br>函数功能：初始化邻居表。<br>00061-00064：将每一个邻居表neighortable初始化为指向自身的仅有一个节点的链表。<br>2.删除操作</p>
+<p>图4.1.10  邻居表删除节点函数源代码<br>     函数功能：删除释放一个两跳邻居节点记录。<br>     00073-00077：获取两跳邻居节点记录中nbr2_list中的邻居节点结构体nbr和两跳邻居节点结构体nbr2;<br>     00079-00082:释放两跳邻居节点结构体nbr2的空间；<br>     00087-00088：将两跳邻居节点记录中的计时器置为空；</p>
+<p>图4.1.11  两跳邻居节点删除函数源代码<br>     函数功能：将从两跳邻居节点信息中，根据给定的邻居节点地址删除对应的两跳邻居节点.<br>     00111-00113:获取邻居节点的两跳邻居节点信息表；<br>     00115-00121:遍历邻居节点的两跳邻居及节点信息表，直到找到信息表中的两跳邻居节点与给定的两跳邻居节点相同，则删除该两跳邻居节点并返回1，表示删除成功；否则返回0表示没有删除。</p>
+<p>图4.1.12  邻居节点信息表删除函数源代码<br>函数功能：删除邻居节点信息表（及连带的两跳的两跳邻居节点信息表）<br>00177-00182：寻找邻居节点信息表entry。<br>00189-00197：删除邻居节点信息表即连带的两跳邻居节点信息表。</p>
+<p>3.邻居节点的查找与插入<br>图4.1.13  查找给定邻居节点函数源代码<br>函数功能：查找给定邻居节点，能否通过该节点连接到一个给定的两跳邻居节点地址。<br>00140：定义返回值entry，用来记录找到的两跳邻居节点信息表结构体。<br>00142-00147：遍历邻居节点的两跳邻居节点信息表，如果找到信息表中存在两跳邻居节点的两跳邻居节点ip地址匹配给定的两跳邻居节点地址，则返回该两跳邻居节点信息表结构体。否则，返回空指针。</p>
+<p>图4.1.14  插入节点函数源代码<br>函数作用：在邻居节点信息表中插入一条邻居节点信息。如果已存在返回0，否则返回1.<br>00226-00230：检查邻居节点信息表中是否存在要添加的邻居节点信息。<br>00237-00249：添加邻居节点信息并设置内部的地址，willingness，状态等变量的初始化。</p>
+<p>4．邻居表的更新</p>
+<p>图4.1.15  更新邻居信息表状态参数<br>函数功能：更新邻居信息表中的状态为参数link。<br>00306-00322：如果将连接状态置为SYM_LINK时，如果原来是NOT_SYM则通知网络重新进行MPR选举和路由表更新并删除通过这个邻居节点连接到的两跳邻居节点；<br>00323-00333：否则，如果之前状态为SYM_LINK则通知网络重新进行MPR选举和路由表更新。</p>
+<p>5．其他操作<br>    针对邻居表的操作有许多。比如，olsr_expire_nbr2_list函数的作用是回调两跳邻居节点信息表计时器，olsr_print_neighbor_table函数的作用是打印邻居节点信息表，等等。这里就不详细介绍。</p>
+<p>4.2MPR选择<br>MPRS用于把节点的信息传播出去且减少区域内信息重传，因此MPR是经典洪泛算法的一种优化。每个节点在对称一跳链接里独立的选择它的MPRs集合。<br>与MPRS的链接会把在HELLO_message里的链接类型的MPR_NEIGH替换为SYN_NEIGH。<br>4.2.1MPR节点的添加和清除</p>
+<p>图4.2.1  添加邻居节点到MPR集合函数源代码<br>函数作用：添加willingness为WILLALWAYS的邻居节点到MPR集合中。<br>00366-00378：首先将非对称的邻居节点或是不是WILL_ALWAYS的邻居节点忽略，然后将剩余的节点a_neighbor添加到mpr中，并返回添加节点的数量count。</p>
+<p>图4.2.2  清楚被选为MPR节点函数源代码<br>函数作用：将被选为MPR节点的记录清除。<br>00245-00248：如果节点a_neighbor的ismpr值为真的话，那么就将其置为假代表其不是mpr节点，同时将was_mpr置为真，代表该邻居节点曾被选为MPR。<br>00251-00255：遍历邻居节点a_neighbor覆盖的两跳邻居节点的数量置为0。</p>
+<p>4.3拓扑控制消息洪泛<br>拓扑控制消息即TC消息，其数据包格式在前面已有介绍，故在此不再介绍。<br>拓扑控制消息的洪泛有着十分重要的意义，每个被选为MPR的节点向网络中所有节点广播TC消息，节点根据“缺省的路由转发算法”转发TC消息。<br>4.3.1TC消息初始化与删除</p>
+<p>图4.3.1  TC消息初始化函数源代码<br>函数功能：初始化TC消息。<br>00195-00203：对TC消息的初始化，从cookie中获取相应的值为TC消息集合的属性赋值；<br>000208：添加已配置好的TC消息到本地节点的TC消息集合。</p>
+<p>图4.3.2  TC消息删除函数源代码<br>函数功能：删除TC消息。<br>00289-00292：若宏定义LINUX_NETLINK_ROUTING条件，则删除网关信息，其中网关的删除操作需要对网关协议、网关信息是否为空以及网关信息保存时间是否为空进行判断；<br>00296：删除本地的路由表；<br>00307-00311：将timers参数都设置为空，保证数据和设置的彻底删除。<br>00313-00314：从本地TC消息集合中删除该TC消息，并将TC消息链表的阻塞解除。</p>
+<p>4.4路由表的计算<br>   每一个节点都会维护一个路由表用于发送信息。这些路由信息来自于在网络拓扑之上的本地链路信息。因此任一个节点的变动都会引起整个网络拓扑的变化继而影响每个节点维护的路由表的变化。<br>   每一条路由信息都包含信息目的地址、下一跳地址、总跳数、下一跳接口地址。但是在没有路由的节点或者只知道部分信息的节点不包含在路由表内。<br>   具体来说，当发生以下变化的时候，节点的路由表信息才会发生变化：链路集改变、邻居集改变、两跳邻居集改变、网络拓扑集改变、信息库多点接入改变。<br>   在计算X节点的路由的时候使用最小路径算法：<br>1、移除所有路由信息；<br>2、添加所有对称邻居信息，然后把每一个邻居信息的状态N_status=SYM把邻居信息添加到路由列表中，其中<br>   R_dest_addr=L_neighbor_iface_addr<br>   R_next_addr=L_neighbor_iface_addr<br> R_dist =1<br>4.4.1主要数据结构分析</p>
+<p>图4.4.1  主要数据结构源代码<br>    00067-00070：在路由选择的时候使用的复合矩阵，其中包含两个路由之间的花销或者跳数。<br>    00073-00076：该结构体包含下一跳的网关与接口索引。</p>
+<p>第五章 小结</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://cococolin.github.io/2018/01/03/最佳链路状态路由协议OLSR分析/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://cococolin.github.io/2018/01/03/最佳链路状态路由协议OLSR分析/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
