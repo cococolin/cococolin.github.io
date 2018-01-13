@@ -31,8 +31,8 @@
 
   
 
-  <link rel="icon" href="/css/images/mylogo.jpg">
-  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  <link rel="icon" href="/css/images/icon.jpg">
+  <link rel="apple-touch-icon" href="/css/images/icon.jpg">
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
@@ -98,7 +98,7 @@
               <a class="brand" style="
                  margin-top: 0px;"  
                  >
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/icon.jpg">
               </a>
             
             
@@ -172,7 +172,7 @@
               
                 <div class="item active" style="max-height:600px; overflow: hidden;">
               
-                <img id="carousel-img0" src="/css/images/pose.jpg">
+                <img id="carousel-img0" src="/css/images/about/banyizi.jpg">
               </div>
 
               <!-- 自适应大图 -->
@@ -197,7 +197,7 @@
               
                 <div class="item" style="max-height:600px; overflow: hidden;">
               
-                <img id="carousel-img1" src="/css/images/sample.jpg">
+                <img id="carousel-img1" src="/css/iamges/about/cashupi.jpg">
               </div>
 
               <!-- 自适应大图 -->
@@ -222,7 +222,7 @@
               
                 <div class="item" style="max-height:600px; overflow: hidden;">
               
-                <img id="carousel-img2" src="https://source.unsplash.com/collection/954550/1920x1080">
+                <img id="carousel-img2" src="/css/images/about/dongbeif4.jpg">
               </div>
 
               <!-- 自适应大图 -->
@@ -238,6 +238,56 @@
 	                    } else {
 	                      imageTag2.style.height = h + "px";
 	                      imageTag2.style.marginLeft = -(h * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
+	                    }
+	                  };
+              	  };
+                  carouselResize();
+              </script>
+            
+              
+                <div class="item" style="max-height:600px; overflow: hidden;">
+              
+                <img id="carousel-img3" src="/css/images/about/fengge.jpg">
+              </div>
+
+              <!-- 自适应大图 -->
+              <script>
+              	  var carouselResize = function() {
+              	  	  var h = document.body.clientHeight / 3;
+	                  var img3 = new Image();
+	                  var imageTag3 = document.getElementById("carousel-img3");
+	                  img3.src = imageTag3.src;
+	                  img3.onload=function(){
+	                    if (img3.width / img3.height <= document.body.clientWidth / h) {
+	                      imageTag3.style.width = document.body.clientWidth + "px";
+	                    } else {
+	                      imageTag3.style.height = h + "px";
+	                      imageTag3.style.marginLeft = -(h * img3.width / img3.height - document.body.clientWidth) / 2 + "px";
+	                    }
+	                  };
+              	  };
+                  carouselResize();
+              </script>
+            
+              
+                <div class="item" style="max-height:600px; overflow: hidden;">
+              
+                <img id="carousel-img4" src="/css/images/pose.jpg">
+              </div>
+
+              <!-- 自适应大图 -->
+              <script>
+              	  var carouselResize = function() {
+              	  	  var h = document.body.clientHeight / 3;
+	                  var img4 = new Image();
+	                  var imageTag4 = document.getElementById("carousel-img4");
+	                  img4.src = imageTag4.src;
+	                  img4.onload=function(){
+	                    if (img4.width / img4.height <= document.body.clientWidth / h) {
+	                      imageTag4.style.width = document.body.clientWidth + "px";
+	                    } else {
+	                      imageTag4.style.height = h + "px";
+	                      imageTag4.style.marginLeft = -(h * img4.width / img4.height - document.body.clientWidth) / 2 + "px";
 	                    }
 	                  };
               	  };
@@ -354,11 +404,11 @@
 <script src="/js/vdonate.js"></script>
 <script>
 var a = new Donate({
-  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  title: '请打赏，谢谢支持', // 可选参数，打赏标题
   btnText: 'Donate', // 可选参数，打赏按钮文字
   el: document.getElementById('donation_div'),
-  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
-  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+  wechatImage: 'css/images/donate/wechat.png',
+  alipayImage: 'css/images/donate/alipay.jpg'
 });
 </script>
       
@@ -559,7 +609,7 @@ var a = new Donate({
             Hi，昊东
           </div>
           <div class="panel-body">
-            Copyright © 2018 郭昊东 All Rights Reserved.
+            Copyright © 2018 Colin All Rights Reserved.
           </div>
         </div>
       </div>
